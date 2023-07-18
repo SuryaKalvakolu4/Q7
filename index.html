@@ -26,14 +26,14 @@
     </style>
 </head>
 <body>
-    <h1>Station 24</h1>
+    <h1>Purge Air Blower</h1>
     <div id="question"></div>
     <div id="options"></div>
     <button onclick="nextQuestion()">SUBMIT</button>
     <script>
         // Function to clear the quiz score from local storage
 function clearQuizScore() {
-    localStorage.removeItem("Station_24_Score");
+    localStorage.removeItem("Purge_Air_Blower");
 }
 
 // Function to clear local storage when the tab is closed or refreshed
@@ -54,7 +54,7 @@ window.addEventListener('beforeunload', function() {
         ];
 
         let currentQuestion = 0;
-        let Station_24_Score = 0;
+        let Purge_Air_Blower = 0;
 
         // Function to display current question
         function displayQuestion() {
@@ -98,9 +98,9 @@ window.addEventListener('beforeunload', function() {
     }
 
     if (!isAnswered || selectedOption !== quiz[currentQuestion].answer) {
-        Station_24_Score = 0; // Assign zero score if question is not attempted or answered incorrectly
+        Purge_Air_Blower = 0; // Assign zero score if question is not attempted or answered incorrectly
     } else {
-        Station_24_Score++; // Increment score for correct answer
+        Purge_Air_Blower++; // Increment score for correct answer
     }
 }
 
@@ -111,8 +111,8 @@ window.addEventListener('beforeunload', function() {
 
             if (currentQuestion === quiz.length) {
                 // All questions answered, store score in local storage
-                localStorage.setItem("Station_24_Score", Station_24_Score);
-                alert("Quiz completed. Your score is " + Station_24_Score);
+                localStorage.setItem("Purge_Air_Blower", Purge_Air_Blower);
+                alert("Quiz completed. Your score is " + Purge_Air_Blower);
             } else {
                 displayQuestion();
             }
